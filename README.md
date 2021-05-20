@@ -1,13 +1,13 @@
 # Intro
 
-DATTODO
-    - clean twitter keys
+This is a standalone Confluent Platform on Docker demo that ingests Tweets for sentiment analysis via ksqlDB UDF.
 
 # Prerequisites
 
 - [Create](https://developer.twitter.com/en) a Twitter developer account
 - Sign in and create a Standalone app
 - You'll need a few keys: the API key and Secret under "Consumer Keys", and the Access Token and Secret under "Authentication Tokens".
+- Update filter.keywords in connector to customize
 
 # Running demo
 ## Start services
