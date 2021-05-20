@@ -77,7 +77,7 @@ gradle clean shadowJar
 cd ../images/cp-ksqldb-server-sentiment-udf/
 cp ../../ksql-udf/extensions/nlp-udfs-*.jar .
 docker build -t <your org>/cp-ksqldb-server-sentiment-udf:<corresponding CP version>
-docker push <your org>/cp-ksqldb-server-sentiment-udf:<corresponding CP version>```
+docker push <your org>/cp-ksqldb-server-sentiment-udf:<corresponding CP version>
 rm nlp-udfs-*.jar
 ```
 
