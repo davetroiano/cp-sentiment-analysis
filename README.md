@@ -41,6 +41,20 @@ EMIT CHANGES;
 SELECT payload->Text, sentiment(payload->Text) AS sentiment
 FROM tweets
 EMIT CHANGES;
+
+# more interesting: sentiment trend by location
+
+SELECT
+sentiment(payload->Text) as sentiment,
+payload->User->Location,
+TIMESTAMPTOSTRING(WINDOWSTART, 'yyyy-MM-dd HH:mm') as window_start,
+TIMESTAMPTOSTRING(WINDOWEND, 'yyyy-MM-dd HH:mm') as window_end,
+count(*) as cnt
+FROM tweets
+WINDOW TUMBLING (SIZE 1 HOUR)
+GROUP BY payload->User->Location, sentiment(payload->Text)
+HAVING count(*) > 1
+EMIT CHANGES;
 ```
 
 
