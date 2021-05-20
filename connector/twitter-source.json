@@ -1,0 +1,15 @@
+{
+  "name": "TwitterSource",
+  "config": {
+    "connector.class": "com.github.jcustenborder.kafka.connect.twitter.TwitterSourceConnector",
+    "key.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "twitter.oauth.consumerKey": "FILL_IN",
+    "twitter.oauth.consumerSecret": "FILL_IN",
+    "twitter.oauth.accessToken": "FILL_IN",
+    "twitter.oauth.accessTokenSecret": "FILL_IN",
+    "filter.keywords": "confluent,apache kafka",
+    "kafka.status.topic": "tweets",
+    "process.deletes": "false"
+  }
+}

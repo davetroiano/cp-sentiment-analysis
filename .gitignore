@@ -1,0 +1,8 @@
+target/
+.gradle/
+build
+ksql-udf/extensions/nlp-udfs-*.jar
+
+# IntelliJ
+.idea/
+*.iml
