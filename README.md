@@ -1,6 +1,6 @@
 # Intro
 
-This is a standalone Confluent Platform on Docker demo that ingests Tweets for sentiment analysis via ksqlDB UDF.
+This is a standalone Confluent Platform on Docker demo that ingests Tweets for sentiment analysis via ksqlDB UDF. The UDF calls a [FastAPI](https://fastapi.tiangolo.com/)-hosted endpoint that uses a pretrained BERT model for text classification exposed by [HuggingFace](https://huggingface.co/).
 
 # Prerequisites
 
