@@ -66,7 +66,7 @@ If you need to build / push a new image (to upgrade, add a connector, modify the
 ### Connect image
 ```
 cd images/kafka-connect-twitter
-docker build -t <your org>/kafka-connect-twitter:<corresponding CP version>
+docker build -t <your org>/kafka-connect-twitter:<corresponding CP version> .
 docker push <your org>/kafka-connect-twitter:<corresponding CP version>
 ```
 
@@ -76,7 +76,7 @@ cd ksql-udf
 gradle clean shadowJar
 cd ../images/cp-ksqldb-server-sentiment-udf/
 cp ../../ksql-udf/extensions/nlp-udfs-*.jar .
-docker build -t <your org>/cp-ksqldb-server-sentiment-udf:<corresponding CP version>
+docker build -t <your org>/cp-ksqldb-server-sentiment-udf:<corresponding CP version> .
 docker push <your org>/cp-ksqldb-server-sentiment-udf:<corresponding CP version>
 rm nlp-udfs-*.jar
 ```
@@ -84,6 +84,6 @@ rm nlp-udfs-*.jar
 ### Model serving image
 ```
 cd images/nlp-model-serving
-docker build -t <your org>/nlp-model-serving:<version>
+docker build -t <your org>/nlp-model-serving:<version> .
 docker push <your org>/nlp-model-serving:<version>
 ```
